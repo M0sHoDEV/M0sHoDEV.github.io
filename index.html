@@ -1,0 +1,1189 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Mas vacaciones</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Ysabeau:ital,wght@1,300&display=swap" rel="stylesheet">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Vina+Sans&family=Ysabeau:ital,wght@1,300&display=swap" rel="stylesheet">
+
+	<style type="text/css">
+		*{
+			margin:0;
+			padding: 0;
+			box-sizing: border-box;
+			background-size: 100% 100%;
+			background-repeat: no-repeat;
+			cursor: pointer;
+			user-select: none;
+			
+		}
+
+		body{
+			height: 100vh;
+		}
+
+		.contenedor{
+			height: 100%;
+			width: 100%;
+			background: #3aa;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+		
+		.flex-container{
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+
+		.contenedor-intermedio{
+			height: 100%;
+			width: 100%;
+			background-image: url("https://www.solofondos.com/wp-content/uploads/2015/11/fondos-para-paginas-web-profesionales-3d-grandes.jpg");
+		
+			
+			display: grid;
+			grid-template-columns: 1fr;
+			grid-template-rows: .5fr .7fr 2fr .5fr;
+			
+			
+		}
+		header{
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			padding: 10px;
+
+		}
+		.logo{
+			background-image: url("https://www.solofondos.com/wp-content/uploads/2015/11/fondos-para-paginas-web-profesionales-3d-grandes.jpg");
+			border-radius: 10px;
+			box-shadow: -5px -5px 1px 1px #0005;
+			width: 240px;
+			height: 150px;
+			display: flex;
+			padding: 10px;
+			transition: transform .4s ease;
+
+		}
+		.logo:hover{
+			transform:scale(1.2) translateY(10px);
+			box-shadow: 10px 10px 10px 2px #0007;
+		}
+		.logo>div{
+			width: 50%;
+			
+			text-align: center;
+
+		}
+		.logo-muestra{
+			align-items: flex-start;
+			
+		}
+		
+
+		.logo-img{
+			width: 100%;
+
+		}
+
+		.nombre-club{
+			font-family: 'Ysabeau', sans-serif;
+			font-size: 1em;
+			color: #3bb3e0;
+			flex-direction: column;
+			
+
+		}
+		.vip{
+			font-family: 'Vina Sans', cursive;
+			font-size: 3em;
+			color: darkgrey;
+			text-shadow: 1px 1px 1px #555;
+			transform: translate(0px,20px);
+		}
+		.feli{
+			text-align: center;
+			font-size: .9em;
+		}
+		.feli h3{
+			font-family: 'Ysabeau', sans-serif;
+			text-shadow: 1px 1px 1px #000;
+
+		}
+
+		.feli b{
+			font-family: 'Vina Sans', cursive;
+			color: #222;
+			font-weight: 500;
+
+		}
+		.botonera{
+			
+			width: 90%;
+			display: grid;
+			grid-template-columns: 1fr 1fr; 
+			padding: 10px;
+		}
+		.botones{
+			flex-direction: column;
+			justify-content: space-around;
+			align-items: flex-start;
+		}
+		.botones span{
+			width: 100%;
+			text-align: center;
+		}
+		
+		
+		.botonera .foto{
+			background-image: url("../resources/pareja.png");
+			 
+			 background-position-x: -125px;
+			 background-size: 200% 100%;
+			 position: relative;
+		}
+
+		footer{
+			display: flex;
+			justify-content: center;
+			align-items: flex-end;
+			
+			height: 100px;
+			padding: 5px;
+		}
+
+		.forw{
+			width: 80%;
+			border-radius: 20px;
+			background: #ddd;
+			display: flex;
+			padding: 4px;
+			justify-content: space-between;
+			border: 3px inset #aaa;
+			z-index: 7;
+		}
+		.forw button{
+			border-radius: 100%;
+			
+
+			font-weight: 900;
+			padding: 5px;
+			box-shadow: 0 0 1px 2px #5557, 0px 0px 1px 2px #2225;
+			color: #444;
+
+		}
+
+		.boton-azul{
+		    margin-top: 2px;
+			background-color: #3bb3e0;
+			font-family: "Open Sans";
+			font-size: 12px;
+			text-decoration: none;
+			color: #fff;
+			text-shadow: 1px 1px 1px #000;
+			position: relative;
+			padding: 10px 20px;
+			border-left: solid 1px  #2ab7ec;
+			margin-left: 35px;
+			background-image: linear-gradient(bottom, rgb(44,260,202) 0%,rgb(62,184,229) 100%);
+			border-top-right-radius: 5px;
+			border-bottom-right-radius: 5px;
+			box-shadow: inset 0px 1px  0px #2ab7ec, 0px 2px 0px 0px #156785, 0px 5px 3px #999;
+
+		}
+		.boton-zul:active{
+			top: 3px;
+			background-image: linear-gradient(bottom, rgb(62,184,229) 0%,rgb(44,160,202) 100%);
+			box-shadow: inset 0px 1px  0px #2ab7ec, 0px 2px 0px 0px #156785, 0px 5px 3px #999;
+
+		}
+
+		.boton-azul::before{
+			content : ">";
+			width: 35px;
+			max-height: 29px;
+			height: 100%;
+			position: absolute;
+			display: block;
+			padding-top: 8px;
+			top:0px;
+			left: -36px;
+			font-size: 16px;
+			font-weight: bold;
+			color: #8fd1ea;
+			text-shadow: 1px 1px 0px #07526e;
+			border-right: solid 1px #07526e;
+			background-image: linear-gradient(bottom, rgb(10,94,125) 0%,rgb(14,139,184) 100%);
+			border-top-left-radius: 5px;
+			border-bottom-left-radius: 5px;
+			box-shadow: inset 0px 1px  0px #2ab7ec, 0px 2px 0px 0px #032b3a, 0px 5px 3px #999;
+
+		}
+
+		.boton-azul:active::before{
+			top: -3px;
+			box-shadow: inset 0px 1px  0px #2ab7ec, 0px 2px 0px 0px #032b3a, 1px 1px 0px 0px #044a64, 2px 2px 0px 0px #044a64,2px 5px 0px 0px #044a64,6px 4px 2px #0b698b, 0px 10px 5px #999;
+		}
+
+		.venetur{
+			text-shadow: 1px 1px 1px #000;
+		}
+
+		.minima{
+			text-shadow: 1px 1px 1px #000;
+		}
+		i{
+			text-shadow: 1px 1px 1px #000;
+
+		}
+		.posicionar{
+			position: absolute;
+			top: 0;
+			height: 100vh;
+			width: 100%;
+			transform: translateY(-200%);
+			
+			transition: transform .2s ease;
+			
+		}
+
+		.uno{
+			
+			background-image: url("../resources/uno.png") ;
+			z-index: 2;
+		}
+
+		.dos{
+			
+			background-image: url("../resources/dos.png") ;
+			z-index: 3;
+		}
+		
+		.tres{
+		    background-image: url("../resources/tres.png");
+		    z-index: 4;
+		}
+		
+		.cuatro{
+		    background-image: url("../resources/cuatro.png");
+		    z-index: 5;
+		}
+		.activo{
+			transform: translateY(0);
+
+		}
+		
+		
+		.loader{
+		    position: absolute;
+		    top: 0;
+		    height: 100vh;
+		    width: 100%;
+		    background: #000;
+		    display: flex;
+		    flex-direction: column;
+		    justify-content: center;
+		    align-items: center;
+		    z-index: 9;
+		    
+		    
+		}
+		.loader-img{
+		    animation: load .9s ease 3;
+		    transition: transform .3s ease-in;
+		}
+		
+		@keyframes load{
+		    0%{
+		        transform: scale(1.2);
+		    }
+		    50%{
+		        transform: scale(1);
+		    }
+		    100%{
+		        transform: scale(1.2);
+		    }
+		}
+		.load-text{
+		    color: #fff;
+		    position: absolute;
+		    bottom: 10px;
+		    font-size: 1.5em;
+		    
+		    
+		}
+		.transportar{
+		    transform: translate(-34px,-270px);
+		}
+	
+		
+		#afiliar{
+		    padding: 10px 20px;
+            background-image: linear-gradient(to bottom, orange 10%, darkorange 100%);
+		    border-radius: 20px;
+		    color: #3bb3e0;
+		    text-shadow: 1px 1px 1px #222;
+		    border: none;
+		    
+		    width: 90%;
+		    position: absolute;
+		    bottom: 0;
+		    box-shadow: -1px -1px 1px 1px darkorange, 1px 1px 1px 1px darkorange;
+		    font-family: "Ysabeau", Sans-Serif;
+		    animation: af 2s ease infinite;
+		}
+		
+		@keyframes af{
+		    0%{
+		        transform: translateY(10px);
+		    }
+		    50%{
+		        transform: translateY(0);
+		    }
+		    60%{
+		        transform: translateY(0);
+		    }
+		    70%{
+		        transform: translateY(0);
+		    }
+		    80%{
+		        transform: translateY(5px);
+		    }
+		    90%{
+		        transform: translateY(0);
+		    }
+		    100%{
+		        transform: translateY(10px);
+		    }
+		}
+		.registro{
+		    background-image: linear-gradient(to bottom,#fff,#fff,#fff,#3bb3e0,#1ab3e0 );
+		    color: #fff;
+		    z-index: 10;
+		    display: grid;
+		    grid-template-columns: 1fr;
+		    grid-template-rows: 1fr 2fr .5fr;
+		}
+		
+		
+		.reg{
+		    display: grid;
+		    grid-template-columns: 1fr;
+		    grid-template-rows: 1fr .5fr;
+		    
+		    background:#3bb3e0;
+		    width: 90%;
+		    height: 100%;
+		    border-radius: 10px;
+		}
+		
+		.tarjeta{
+		    display: flex;
+		    flex-direction: column;
+		    color: #fff;
+		    padding: 15px;
+		    text-shadow: 1px 1px 1px #000;
+		    box-shadow: 0px -10px 10px 1px #0004;
+		    
+		}
+		.tarjeta label{
+		    align-self: flex-start;
+		}
+		.tarjeta input{
+		    padding: 10px 20px;
+		    border: none;
+		    border-bottom: 1.5px solid #fff;
+		    width: 100%;
+		    background: none;
+		    outline: none;
+		    text-shadow: none;
+		    color: inherit;
+		}
+		.d{
+		    width: 100%;
+		    
+		}
+		.tarjeta input::placeholder{
+		    color: #fff8;
+		    font-weight: 900;
+		    text-shadow: 1px 1px 1px #000;
+		    
+		}
+		.btn-log{
+		    
+		    padding: 10px 20px;
+		    background: #fff;
+		    color: #000;
+		    text-shadow: 1px 1px 1px #000;
+		    border: none;
+		    border-radius: 5px;
+		    box-shadow: 0 0 10px 1px #0004;
+		    width: 90%;
+		}
+		.box{
+		    color: #3bb3e0;
+		}
+		.consultar-codigo{
+		    background: none;
+		    border: none;
+		    border-bottom: .5px solid #222;
+		    padding: 10px;
+		    width: 70%;
+		    outline: none;
+		    text-align: center;
+		}
+		
+	
+		
+		.buscando-afiliado{
+		    background: #fff;
+		    position: absolute;
+		    top: 0;
+		    width: 100%;
+		    height: 100%;
+		    z-index: 11;
+		    flex-direction: column;
+		    transform: scale(0);
+		    transition: transform .3s ease;
+		}
+		.activo2{
+		    transform: scale(1);
+		}
+		
+		.encontrado{
+		    width: 100%;
+		    height: 100%;
+		    display: grid;
+		    grid-template-columns: 1fr;
+		  grid-template-rows: 1fr 1fr;
+		    
+		   
+		}
+		.img-encontrado{
+		    background-size: 90% 90%;
+		    background-position: center;
+		    background-image: url("../resources/perfil.png");
+		    
+		}
+		.datos-encontrados{
+		    display: flex;
+		    flex-direction: column;
+		    justify-content: center;
+		    align-items: center;
+		    background-image: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
+		    
+		    
+		}
+		
+		
+		
+		.datos-encontrados span{
+		    
+		    width: 100%;
+		    padding: 10px 20px;
+		    border: 1px inset #ccc;
+		     border-radius:10px;
+		     
+		     margin: 2px;
+		     color: #fff;
+		    
+		    
+		}
+		[img] img{
+		    text-shadow: 1px 1px 2px #000;
+		    filter:drop-shadow(-2px -2px 1px #0006);
+		}
+		
+		.tarjeta-generada{
+		    z-index: 12;
+		    background: #fff;
+		    height: 100vh;
+		    padding: 15px;
+		    
+		    
+		}
+		.contrato{
+		    display: flex;
+		    justify-content: space-around;
+		    align-items: center;
+		    flex-direction: column;
+		    height: 100vh;
+		    
+		}
+		.contrato h1{
+		    text-align: center;
+		    text-decoration: underline #3bb3e0;
+		    color: #777;
+		}
+		.contrato p{
+		    text-align: justify;
+		    padding: 10px;
+		}
+		.btnp{
+		    display: flex;
+		}
+	    .btnp> button{
+		    width: 50%;
+		    margin: 2px;
+		    padding: 10px 20px;
+		    color: #fff;
+		    background: #3bb3e0;
+		    border: none;
+		    font-weight: 900;
+		    
+		}
+		
+		.posicionar-menu{
+		    position: absolute;
+		    width: 100%;
+		    height: 100vh;
+		    background: #2224;
+		    top: 0;
+		    z-index: 10;
+		    transform: translateX(-200%);
+		    
+		    
+		    
+		}
+		.activo3{
+		    transform: translateX(0);
+		    
+		}
+		
+		
+		.menu-opciones{
+		    width: 55%;
+		    background-image: linear-gradient(to bottom, #fff,#3bb3e0,transparent);
+		    flex-direction: column;
+		    justify-content: flex-start;
+		    align-items: ;
+		    height: 100vh;
+		    box-shadow: 0 0 10px 1px #0007;
+		    border-right: 2px solid cyan;
+		    transform: translateX(-200%);
+		    transition: transform .3s ease .4s;
+		    
+		}
+		.efecto-delay{
+		    transform: translateX(0);
+		}
+		
+		.menu-opciones span{
+		    background: #3bb3e0;
+		    color: #fff;
+		    width: 100%;
+		    margin: 2px;
+		    padding: 10px 20px;
+		    text-shadow: 1px 1px 1px #000;
+		    box-shadow: 0 0 10px 1px #0004;
+		}
+		.menu-opciones h3{
+		    color: orange;
+		    text-shadow: 1px 1px 1px darkorange;
+		   margin: 5px;
+		}
+		
+		.ilustracion{
+		    background-image: url("../resources/lectorqr.png");
+		    height: 50%;
+		    width: 100%;
+		    margin: 3px;
+		   
+		}
+		.modal-input{
+		    z-index: 12;
+		    
+		    
+		    
+		}
+		.modal-input input{
+		    padding: 10px 20px;
+		    border: none;
+		    border-bottom: 1px solid grey;
+		    outline: none;
+		   
+		}
+		.modal-input button{
+		   
+		    border: none;
+		    background: none;
+		    font-size: 1.5em;
+		    
+		}
+		.modal-input > div{
+		    background: #fff;
+		    height: 60px;
+		    padding: 10px;
+		    display: grid;
+		    grid-template-columns: 2fr 30px;
+		    box-shadow: 0 0 10px 2px #000;
+		}
+	
+		
+		.tarjetaVIP{
+		    background-image: linear-gradient(to top, #e6e9f0 0%, #eef1f5 100%);
+		    z-index: 15;
+		    flex-direction: column;
+		    
+		}
+		.tarjeta-contenedor{
+		    height: 400px;
+		    width: 100%;
+		    border: 2px solid grey;
+		    display: grid;
+		    grid-template-columns: 1fr;
+		    grid-template-rows: 2fr 1fr;
+		    background-image: linear-gradient(to bottom, #30cfd0 0%, #330867 100%);
+		    background-image: linear-gradient(to top, #accbee 0%, #e7f0fd 100%);
+		    color: #222;
+		    box-shadow: 0px 0px 5px 1px #0004;
+		}
+		.tarjeta-contenedor > div:nth-child(1) > div:nth-child(1){
+		    background-image: url("../resources/codigo-qr.png");
+		    background-size: 90% 90%;
+		    background-position: center;
+		}
+		
+		.tarjeta-contenedor > div:nth-child(1){
+		    display: grid;
+		    grid-template-columns: 1fr 1fr ;
+		    grid-template-rows: 1fr;
+		}
+		
+		.tarjeta-contenedor > div:nth-child(2){
+		    text-align: center;
+		    
+		}
+		
+		.info{
+		    flex-direction: column;
+		    justify-content: space-around;
+		    border: 1px dashed purple;
+		    margin: 2px;
+		}
+		.procesar-tarjeta{
+		    border: none;
+		    width: 100%;
+		    background: #000;
+		    color: #fff;
+		    text-shadow: 1px 1px 1px #000;
+		    padding: 10px 20px;
+		    
+		    box-shadow: 0 0 10px 2px #0004;
+		}
+	
+	.pd{
+	    flex-direction: column;
+	    border: 1px solid orange;
+	    margin: 2px;
+	}
+
+	.pd b{
+	    color: red;
+	    text-decoration: underline;
+	}
+		
+    .paso{
+        background-image: url("../resources/escalera.jpg");
+        z-index: 20;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        
+    }
+    .paso header{
+        display: flex;
+        flex-direction: column;
+    }
+    .paso h1{
+        font-size: 2em;
+        text-shadow: 2px 2px 1px darkorange;
+    }
+    
+    .paso header b{
+        align-self: flex-end;
+        font-size: 5em;
+        text-shadow: 1px 1px 2px darkorange;
+        color: #e83845;
+        border: 1px solid black;
+        border-radius: 80%;
+        padding: 20px;
+        margin: 5px;
+        transform: rotateZ(15deg);
+        box-shadow: 2px 2px 1px #222;
+        
+    }
+    .paso header em{
+        font-size: 5em;
+        text-shadow: 2px 2px 1px darkorange;
+        align-self: flex-end;
+    }
+    
+    .paso header span{
+        font-style: italic;
+        font-weight: 900;
+        text-decoration: underline;
+        align-self: flex-end;
+    }
+   
+    .paso main{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-direction: column;
+        text-align: center;
+        height: 30vh;
+        color: #e83845;
+        font-weight: 900;
+        background: #3bb3;
+        text-shadow: 1px 1px 1px #000;
+    }
+    .paso footer{
+        text-align: center;
+        font-weight: 900;
+        letter-spacing: 3px;
+        color: #3bb3e0;
+        text-shadow: 1px 1px 1px darkorange;
+        
+    }
+    
+		
+	</style>
+</head>
+<body style="position: relative;">
+    
+    <div class="modal-input posicionar">
+        <div>
+            <input class="looking-af" type="text" placeholder="Introduzca codigo ID" autofocus="">
+            <button onclick="buscar();">🔍</button>
+        </div>
+        
+        
+    </div>
+    
+    
+    <section class="paso posicionar">
+        <header>
+            <h1>¡FELICITACIONES!</h1>
+            <span>Estamos a sólo</span>
+            <b>1</b>
+            <em>PASO</em>
+            
+            
+        </header>
+        
+        <main>  
+            <h3> ⬇️</h3>
+            
+            <p>
+                Para concluir el registro, debe presentar el contrato firmado ante nuestro representante quien liberará el código ID y Qr que le permitirá disfrutar de los beneficios de pertener al Club Venetur.
+                <button class="btn-log procesar-tarjeta">Enviar Solicitud al Correo del CLUB</button>
+            </p>
+        
+        </main>
+        <footer>
+            ©️ Mas Vacaciones,C.A - Todos los derechos reservados
+        </footer>
+    </section>
+    
+    
+    <section class="tarjetaVIP posicionar flex-container">
+        
+        <div class="tarjeta-contenedor">
+            <div>
+                <div>
+                    
+                </div>
+                <div class="info flex-container">
+                    <b>Jesus Marcano</b>
+                    <b>V-13.669.119</b>
+                    <b>xyz@gmail.com</b>
+                    <b>ID#34563</b>
+                    
+                </div>
+            </div>
+            
+            <div class="flex-container pd">
+                <h3>MAS VACACIONES,C.A</h3>
+                <b>Esta tarjeta no acredita a quien se identifique como su titular hasta tanto  el contrato no sea debidamente firmado por ambas partes. Una vez obtenida las voluntades, se procederá con el registro final del nuevo afiliado en el sistema. </b>
+            </div>
+            
+            </div>
+            <button class="">Enviar solicitud</button>
+        
+        
+    </section>
+    
+    <section class="posicionar-menu posicionar">
+        <nav class="menu-opciones flex-container">
+           
+            <div class="flex-container">
+                <h3>Buscar Afiliado </h3>
+            
+            </div>
+            <span onclick="inputSearch();">Insertar código ID 🔎</span>
+            <span>Leer Qr ⬇️</span>
+            <div class="ilustracion">
+                
+            </div>
+            
+           
+            
+            
+        </nav>
+    
+        
+    </section>
+    
+    
+    <section class="tarjeta-generada posicionar flex-container">
+        <div class="contrato">
+            <h1>CONTRATO MARCO DE OPERACIONES DE DESCUENTO</h1>
+            <articles style="overflow:auto;">
+                <p>
+                    Entre, Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus nemo earum quas doloremque aliquam, similique repellendus iusto veniam nostrum magnam consequuntur ipsam assumenda explicabo quibusdam reiciendis dolorem, autem labore, nulla.
+                    
+                    <br><br>
+                    <b>PRIMERO: </b>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis tenetur eos facilis laboriosam. Tenetur tempore quos ducimus ipsam, fuga adipisci dicta dolores reprehenderit aperiam, cupiditate consequuntur neque in. Deleniti, ducimus!
+                    
+                    <br><br>
+                   <b>SEGUNDO: </b> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem repellat nemo, dignissimos laboriosam. Tempore quidem non culpa, doloribus commodi ipsa sunt mollitia laudantium deleniti, explicabo itaque voluptates tenetur, eveniet neque.
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam in voluptatem porro accusamus, quo, eius nam temporibus officia reiciendis aliquam sapiente quae alias omnis soluta! Voluptatem suscipit labore ipsam neque!
+                    Lorem ipsum dolor sit amet, consectetur. <br><br> <b>TERCERO: </b>adipisicing elit. Vel repellat quo eaque ut modi veniam quisquam animi ipsam consequuntur, quam laudantium quidem pariatur, ducimus atque cumque, voluptatibus porro maiores adipisci.
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt dolorum hic minus et nemo enim aperiam nihil, sequi voluptatem adipisci pariatur numquam earum ex modi, ratione vitae explicabo in, quibusdam.
+                    <br><br>
+                    <div class="btnp">
+                    <button onclick="tarjetaVIP();">Aceptar</button><button onclick="$('.tarjeta-generada').classList.toggle('activo');">Declinar</button>
+                    </div>
+                </p>
+            </articles>
+        </div>
+        
+    </section>
+    
+    
+    
+    <section class="buscando-afiliado flex-container">
+        
+        <div class="encontrado">
+            <div class="img-encontrado">
+                
+            </div>
+            
+        
+            
+            <div class="datos-encontrados" >
+                
+          </div>
+        </div>
+        
+    </section>
+    
+    <section class="registro posicionar">
+        <div class="header flex-container">
+            <img src="../resources/pase-vip.gif" alt=""width="200" height="200">
+            	<b class="venetur box">★彡𝒞𝓁𝓊𝒷 𝒱𝑒𝓃𝑒𝓉𝓊𝓇彡★</b>
+        </div>
+        
+        <div class="reg-con flex-container">
+            <div class="reg flex-container">
+                
+                <div class="tarjeta">
+                    <label for="">Nombre</label>
+                    <input placeholder="Ej. Pedro Perez" type="text" class="nom">
+                    <label for="">Cedula</label>
+                    <input placeholder="V-00.000.000" type="text" class="ced">
+                    <label for="">Correo</label>
+                    <input placeholder="Ej. xyz@gmail.com" type="email" class="correo">
+                    <label for="">Empresa</label>
+                    <input placeholder="Ej. Mas Vacaciones, C.A" type="text" class="empresa">
+                </div>
+        
+         
+        
+        <div class="d flex-container">
+            <button onclick="$('.tarjeta-generada').classList.toggle('activo');" class="btn-log">Generar Contrato</button>
+            <button class="btn-log comeback">Regresar</button>
+        </div>
+        </div>
+    </section>
+
+	<section class="uno posicionar">
+		
+
+	</section>
+	<section class="dos posicionar">
+		
+
+	</section>
+	
+	<section class="tres posicionar">
+	    
+	</section>
+	
+	<section class="cuatro posicionar">
+	    
+	    
+	</section>
+	
+	<section class="loader">
+	    <img class="loader-img" src="../resources/img.png" alt="" width="100" height="50">
+	    <b class="load-text">Cargando </b>
+	</section>
+	
+
+
+	<div class="contenedor">
+		<div class="contenedor-intermedio">
+			<header>
+				<div class="logo">
+					<div class="logo-muestra flex-container">
+						
+						<img class="logo-img" src="../resources/img.png">
+					</div>
+
+					<div class="nombre-club flex-container">
+						
+						<b class="venetur">★彡𝒞𝓁𝓊𝒷 𝒱𝑒𝓃𝑒𝓉𝓊𝓇彡★</b>
+						<em class="vip"> <img src="../resources/diamante.png" width="50" height="50"></em>
+
+
+					</div>
+
+				</div>
+			</header>
+			<div class="feli">
+				<i>¡Esta es su llave para la felicidad!</i>
+				<br><br>
+				<h3 class="">MUCHOS BENEFICIOS</h3>
+				<b class="minima"> 𝕌ℕ𝔸 𝕄𝕀ℕ𝕀𝕄𝔸 𝕀ℕ𝕍𝔼ℝ𝕊𝕀𝕆ℕ</b>
+		       
+			</div>
+
+			<div class="botonera">
+				<div class="foto">
+				    
+					<button onclick="afiliar();" id = "afiliar">Afíliame✔️</button>
+				</div>
+				<div class="botones flex-container">
+					<span onclick="spa();" class="boton-azul">Smile Center</span>
+					<span onclick="gym();" class="boton-azul">Giovanna</span>
+					<span onclick="jur();" class="boton-azul">Dr. Marcelo</span>
+					<span onclick="res();" class="boton-azul">GioMar</span>
+					<span class="boton-azul">Otros Descuentos</span>
+					
+
+				</div>
+			</div>
+
+			<footer>
+				<div class="forw">
+					<button onclick="demover();"><img src="../resources/iz.png" width="20px" height="20px"></button>
+					<button onclick="menu();"><img src="../resources/menu.png" alt="" width="20" height="20"></button>
+					<button onclick="home();" class="home"><img src="../resources/hogar.png" alt=""></button>
+					<button onclick="mover();"><img src="../resources/der.png" width="20px" height="20px"></button>
+				</div>
+				
+			</footer>
+			
+		</div>
+	</div>
+
+	<script type="text/javascript">
+		"use strict";
+
+
+		const $ = (query) => document.querySelector(query);
+
+		const lista = [$(".uno"),$(".dos"), $(".tres"),$(".cuatro")];
+
+		let contador = 0;
+		
+		function demover(){
+		    if(contador > 0){
+		        if(contador === lista.length) contador--;
+		       lista[contador].classList.remove("activo");
+		       contador--;
+		    
+		       lista[contador].classList.add("activo");
+		    }
+		    else{
+		        lista[contador].classList.remove("activo");
+		    }
+		}
+
+		function mover(){
+			if(contador !== lista.length){
+
+				lista[contador].classList.add("activo");
+				contador++;
+			}
+			
+		}
+		function home(){
+		    lista.forEach((val)=>{
+		        val.classList.remove("activo");
+		    })
+		    contador = 0;
+		}
+		
+		function spa(){
+		    lista[0].classList.add("activo");
+		    contador = 0;
+		}
+		
+		function gym(){
+		    lista[1].classList.add("activo");
+		    contador = 1;
+		}
+		
+		function jur(){
+		    lista[2].classList.add("activo");
+		    contador = 2;
+		}
+		
+		function res(){
+		    lista[3].classList.add("activo");
+		    contador = 3;
+		}
+		
+		function afiliar(){
+		    $(".registro").classList.toggle("activo");
+		    
+		    
+		}
+		
+		function buscar(){
+		    
+		    if($(".looking-af").value !== "33457"){
+		        
+		        if(!$(".looking-af").value){
+		            $(".looking-af").setAttribute("style","border-bottom: 3px solid red;");
+		            
+		            setTimeout(()=>{
+		                $(".looking-af").setAttribute("style", "border-bottom: 1px solid grey;");
+		            },2000);
+		            
+		            
+		        }else{
+		        
+		        
+		    $(".datos-encontrados").innerHTML= "<span class='flex-container' style='border:none;'> <img width='100' height='100' src = '../resources/giphy.gif'> <b style='display:block; text-align:center'>¡ESTE ID NO CORRESPONDE A NINGÚN AFILIADO DE NUESTRO CLUB!</b></span><button class='btn-log exit'>Volver</button>";
+		    
+		    $(".buscando-afiliado").classList.toggle("activo2");
+		    $(".modal-input").classList.toggle("activo");
+		    
+		    $(".exit").onclick = ()=>{
+		        $(".buscando-afiliado").classList.toggle("activo2");
+		    }
+		  }
+		   
+		    }
+		    else{
+                $(".datos-encontrados").innerHTML = `<span>Nombre:<b class="name">Jesus Marcano</b>
+                </span>
+                
+                <span>Cedula: 
+                <b class="cedula">V-18.122.222</b>
+                </span>
+                <span>Correo:
+                <b class="correo">xyz@gmail.com</b>
+                </span>
+            
+                <span>Empresa:
+                <b class="empresa">Mas Vacaciones,C.A</b>
+                </span>
+                
+                <span>Codigo:
+                <b class="codigo"> #33457</b>
+                </span>
+                
+                <span>Fecha de Afiliacion:
+                <b>12/12/23</b>
+                </span>
+                
+                <span onclick="$('.buscando-afiliado').classList.toggle('activo2');" img style="background:#fff5; width:100px; border:none;
+                "><img src="../resources/atras.png" alt="" width="40px" height="40px"></span>
+                `
+                
+  
+		        $(".buscando-afiliado").classList.toggle("activo2");
+		        $(".modal-input").classList.toggle("activo");
+		    }
+		    
+		}
+		
+		function inputSearch(){
+		    $(".modal-input").classList.toggle("activo");
+		    $(".posicionar-menu").classList.toggle("activo3");
+		    $(".posicionar-menu").children[0].classList.toggle("efecto-delay");
+		    
+		}
+		
+		function menu(){
+		    $(".posicionar-menu").classList.toggle("activo3");
+		    $(".menu-opciones").classList.toggle("efecto-delay");
+		}
+		
+		function tarjetaVIP(){
+		    $(".paso").classList.toggle("activo");
+		}
+		
+		addEventListener("click",(e)=>{
+		    if(e.target === $(".posicionar-menu")){
+		        e.target.classList.toggle("activo3");
+		        e.target.children[0].classList.toggle("efecto-delay");
+		    }
+		    if(e.target === $(".modal-input")){
+		        e.target.classList.toggle("activo");
+		        e.target.children[0].children[0].value = "";
+		    }
+		    
+		    if(e.target === $(".procesar-tarjeta")){
+		        $(".tarjeta-generada").classList.toggle("activo");
+		        $(".paso").classList.toggle("activo");
+		        $(".registro").classList.toggle("activo");
+		        alert("Solicitud Enviada con éxito!");
+		    }
+		    
+		    if(e.target === $(".comeback")){
+		        $(".registro").classList.toggle("activo");
+		    }
+		})
+		
+		
+		addEventListener("DOMContentLoaded",()=>{
+		    let c = 0;
+		    
+		    let interval = setInterval(()=>{
+		        $(".load-text").innerText +=".";
+		        c++;
+		        if(c == 4) clearInterval(interval);
+		    },1000);
+		   
+		    setTimeout(()=>{
+		        
+		        $(".loader-img").classList.add("transportar");
+		        //$(".loader").style.display="none";
+		    },3000);
+		    
+		    
+		    setTimeout(()=>{
+		        $(".loader").style.display = "none";
+		    },3400);
+		})
+		
+		
+
+	</script>
+
+</body>
+</html>
